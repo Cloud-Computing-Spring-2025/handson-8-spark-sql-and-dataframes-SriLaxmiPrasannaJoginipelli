@@ -8,18 +8,20 @@ os.makedirs("input", exist_ok=True)
 
 # Sample users
 user_data = []
-usernames = [
-    "@techie42", "@critic99", "@daily_vibes", "@designer_dan", "@rage_user",
-    "@meme_lord", "@social_queen", "@calm_mind", "@pixel_pusher", "@stream_bot"
-]
+# usernames = [
+#     "@techie42", "@critic99", "@daily_vibes", "@designer_dan", "@rage_user",
+#     "@meme_lord", "@social_queen", "@calm_mind", "@pixel_pusher", "@stream_bot"
+# ]
+usernames = [f"@user{i}" for i in range(1, 101)]
 age_groups = ["Teen", "Adult", "Senior"]
 countries = ["US", "UK", "Canada", "India", "Germany", "Brazil"]
 verified_status = [True, False]
 
-for user_id in range(1, 51):
+for user_id in range(1, 101):
     user = {
         "UserID": user_id,
-        "Username": usernames[user_id - 1],
+        # "Username": usernames[user_id - 1],
+        "Username": usernames[user_id - 1],  
         "AgeGroup": random.choice(age_groups),
         "Country": random.choice(countries),
         "Verified": random.choice(verified_status)
